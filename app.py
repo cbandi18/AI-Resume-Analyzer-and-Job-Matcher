@@ -94,10 +94,7 @@ async def analyze_resume(file: UploadFile = File(...)):
 def streamlit_app():
     st.title("AI Resume Analyzer & Job Matcher")
     
-    uploaded_file = st.file_uploader(
-        "Upload your resume (PDF)", 
-        type=["pdf"]
-    )
+    uploaded_file = st.file_uploader("Upload your resume (PDF)", type=["pdf"])
     
     if uploaded_file:
         with st.spinner("Analyzing resume..."):
